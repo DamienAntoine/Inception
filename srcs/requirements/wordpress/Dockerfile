@@ -22,10 +22,10 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     chmod +x wp-cli.phar && \
     mv wp-cli.phar /usr/local/bin/wp
 
-RUN curl -o wordpress.tar.gz -L https://wordpress.org/latest.tar.gz \
-    && mkdir -p /var/www/html \
-    && tar -xzvf wordpress.tar.gz -C /var/www/html --strip-components=1 \
-    && rm wordpress.tar.gz
+#RUN curl -o wordpress.tar.gz -L https://wordpress.org/latest.tar.gz \
+#    && mkdir -p /var/www/html \
+#    && tar -xzvf wordpress.tar.gz -C /var/www/html --strip-components=1 \
+#    && rm wordpress.tar.gz
 
 RUN chown -R www-data:www-data /var/www/html
 
