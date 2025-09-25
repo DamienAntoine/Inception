@@ -26,7 +26,7 @@ make
 
 After running `./setup.sh`, edit `srcs/.env` with your values:
 
-- **DOMAIN_NAME**: Your domain (typically your-login.42.fr)
+- **DOMAIN_NAME**: Your domain
 - **WP_ADMIN**: WordPress admin username
 - **WP_ADMIN_PASSWORD**: WordPress admin password
 - **MYSQL_PASSWORD**: Database password
