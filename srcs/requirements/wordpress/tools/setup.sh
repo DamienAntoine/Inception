@@ -1,10 +1,10 @@
 #!/bin/bash
 
-wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+#wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
-chmod +x wp-cli.phar
+#chmod +x wp-cli.phar
 
-mv wp-cli.phar /usr/local/bin/wp
+#mv wp-cli.phar /usr/local/bin/wp
 
 chmod 777 /var/www/html
 

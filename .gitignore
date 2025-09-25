@@ -1,11 +1,19 @@
-.env
+# Environment files
+srcs/.env
 
-data/
-*/data/
-
+# macOS and editor files
 .DS_Store
 *.swp
 *.swo
 *~
 
+# Log files
 *.log
+
+# Secret files (keep only .gitkeep)
+secrets/*
+!secrets/.gitkeep
+
+# Data directories (keep only .gitkeep)
+srcs/data/*
+!srcs/data/.gitkeep

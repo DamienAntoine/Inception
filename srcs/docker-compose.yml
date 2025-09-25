@@ -5,7 +5,7 @@ services:
     container_name: nginx
     build: ./requirements/nginx
     volumes:
-      - /home/dantoine/data/wordpress:/var/www/html
+      - ./data/wordpress:/var/www/html
     ports:
       - "443:443"
     environment:
@@ -22,7 +22,7 @@ services:
     container_name: wordpress
     build: ./requirements/wordpress
     volumes:
-      - /home/dantoine/data/wordpress:/var/www/html
+      - ./data/wordpress:/var/www/html
     environment:
       - WORDPRESS_DB_HOST=mariadb:3306
       - DOMAIN_NAME=${WP_URL}
@@ -38,7 +38,7 @@ services:
     container_name: mariadb
     build: ./requirements/mariadb
     volumes:
-      - /home/dantoine/data/mariadb:/var/lib/mysql
+      - ./data/mariadb:/var/lib/mysql
     env_file:
       - ./.env
     networks:
@@ -54,10 +54,10 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/dantoine/data/mariadb
+      device: ./data/mariadb
   wordpress_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/dantoine/data/wordpress
+      device: ./data/wordpress
